@@ -1,12 +1,11 @@
 import React from 'react'
-import { Button } from '@/component/ui/Button';
+import { Home } from '@/page/Home'
+import './App.css'
 
 const App = () => {
   return (
     <div>
-      <Button value="1" />
-      <Button value="2" />
-      <Button value="3" />
+      <Home />
     </div>
   )
 }
