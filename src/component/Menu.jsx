@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoBrush, IoCamera, IoCube, IoFilm, IoGlobe, IoRefresh } from 'react-icons/io5';
+import { IoColorPalette } from 'react-icons/io5';
 
 export function Menu() {
 
@@ -17,22 +18,20 @@ export function Menu() {
     <div
       className="
         w-[16.563rem] 
-        h-[60.563rem]  
+        h-full  
         [background:linear-gradient(209.2deg,_#3F51B5_42.5%,_#673AB7_92.49%)]
         [box-shadow:0_0_14.9px_0_#0000001F]
         rounded-[0.625rem]
         text-white
       "
     >
-      {/* Ad Type Tabs */}
       <div className="border-white/20 flex gap-3 p-4 border-b">
         <button className="text-xs leading-[100%] py-1 px-2 text-white/80">Ad Copy</button>
         <button className="font-semibold text-xs py-1 px-2 text-[12px] leading-[100%] tracking-[0%]">Ad Creative</button>
         <button className="text-xs leading-[100%] py-1 px-2 text-white/80">Ad Video</button>
       </div>
 
-      {/* Ad Creative Menu */}
-      <div className='flex flex-col gap-3'>
+      <div className='flex flex-col'>
 
         <div className='border-white/20 flex flex-col gap-3 p-3 border-b'>
 
@@ -93,11 +92,10 @@ export function Menu() {
 
         <div className='border-white/20 flex flex-col gap-3 p-3 border-b'>
 
-          {/* Aspect Ratio */}
           <div class="flex flex-col gap-2">
             <div class="flex items-center gap-1">
               <label class="font-normal text-xs leading-[100%]">Aspect Ratio</label>
-              <i class="opacity-40 w-3 h-3 text-white"></i>
+              <FaRegQuestionCircle className="opacity-40 w-3 h-3 text-white" />
             </div>
             <div class="flex gap-2">
               <button class="w-[68.94px] h-[30px] bg-[#3445A1] rounded-[5px] border-[0.5px] border-white/20 flex items-center justify-center gap-1">
@@ -118,7 +116,6 @@ export function Menu() {
             </div>
           </div>
 
-          {/* Image Style */}
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-1">
               <span className="font-normal text-xs leading-[100%]">Image Style</span>
@@ -152,7 +149,6 @@ export function Menu() {
             </div>
           </div>
 
-          {/* Generation Pace */}
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-1">
               <span className="font-normal text-xs leading-[100%]">Generation Pace</span>
@@ -171,7 +167,6 @@ export function Menu() {
             </div>
           </div>
 
-          {/* Number of Ad Creatives */}
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-1">
               <span className="font-normal text-xs leading-[100%]">Number of Ad Creatives</span>
@@ -192,39 +187,42 @@ export function Menu() {
               <span className="font-normal text-xs leading-[100%]">Color Palette</span>
               <FaRegQuestionCircle className="opacity-40 w-3 h-3 text-white" />
             </div>
-            <div className="flex items-center justify-between bg-[#3445A1] rounded-[5px] border-[0.5px] border-white/20 p-2">
-              <span className="font-normal text-xs leading-[100%]">Auto</span>
-              <div className="flex gap-1">
-                <div className="w-4 h-4 bg-white rounded-full"></div>
-                <div className="w-4 h-4 bg-pink-300 rounded-full"></div>
-                <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                <div className="w-4 h-4 bg-orange-500 rounded-full"></div>
-                <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
+            <div className='flex gap-2'>
+              <div className="flex items-center justify-between bg-[#3445A1] rounded-[5px] border-[0.5px] border-white/20">
+                <span className="font-normal text-xs leading-[100%] p-2">Auto</span>
+                <div className="bg-[#2D3A84] flex gap-1 w-[136px] h-[29px] items-center justify-center m-0">
+                  <div className="rounded-xs w-4 h-4 bg-white"></div>
+                  <div className="rounded-xs w-4 h-4 bg-pink-300"></div>
+                  <div className="rounded-xs w-4 h-4 bg-red-500"></div>
+                  <div className="rounded-xs w-4 h-4 bg-orange-500"></div>
+                  <div className="rounded-xs w-4 h-4 bg-yellow-500"></div>
+                </div>
               </div>
-              <IoIosArrowDown className="w-3 h-3 text-white" />
+              <button className='p-2 bg-[#3445A1] rounded-[5px] border-[0.5px] border-white/20'>
+                <IoIosArrowDown className="w-3 h-3 text-white" />
+              </button>
             </div>
+
+
           </div>
 
         </div>
 
-
-
-
-
-        {/* Annual Plan */}
-        <div className="mt-auto">
-          <div className="bg-[#5C6BC0] rounded-md p-3">
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-semibold text-xs leading-[100%]">Annual Platinum Plan</span>
-              <button className="bg-white text-[#673AB7] rounded-md py-1 px-3 font-normal text-xs">Upgrade</button>
+        <div className="justify-end p-2 mt-32">
+          <div className="w-[246px] h-[92px] rounded-[5px] [background:linear-gradient(284.35deg,_#C85ED8_-20.82%,_#6D3DDA_108.46%)] flex flex-col items-center justify-center">
+            <div className="border-white/20 flex items-center justify-between w-full p-2 border-b">
+              <span className="font-semibold text-xs leading-[100%] tracking-[0px] text-white">Annual Platinum Plan</span>
+              <button className="w-[76px] h-[30px] bg-white rounded-[26.5px] border-[1px] border-[#C85ED8] font-medium text-xs leading-[100%] tracking-[0px] text-[#673AB7]">
+                Upgrade
+              </button>
             </div>
-            <div className="flex gap-4">
-              <div className="flex items-center gap-1">
-                <span className="bg-[#673AB7] rounded-full w-5 h-5 flex items-center justify-center text-xs">🔄</span>
+            <div className="rounded-[29.5px] border-[0.8px] border-white/50 w-[214px] h-[30px] flex items-center m-2">
+              <div className="flex items-center justify-center gap-1 border-r-[0.8px] border-white/50 w-1/2">
+                <IoRefresh className="text-yellow-600 bg-[#1E293B] rounded-full w-4 h-4 flex items-center justify-center p-[1px]" />
                 <span className="text-xs">20/500</span>
               </div>
-              <div className="flex items-center gap-1">
-                <span className="bg-[#673AB7] rounded-full w-5 h-5 flex items-center justify-center text-xs">🎨</span>
+              <div className="flex items-center gap-1 border-l-[0.8px] border-white/50 justify-center w-1/2">
+                <IoColorPalette className="text-yellow-600 bg-[#1E293B] rounded-full w-4 h-4 flex items-center justify-center p-[1px]" />
                 <span className="text-xs">15/300</span>
               </div>
             </div>
