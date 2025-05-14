@@ -29,6 +29,7 @@ export function Menu({ isOpen }) {
     ease-in-out
     ${isOpen ? 'translate-x-2' : '-translate-x-full'} 
     lg:translate-x-4
+    z-10
   `}
 >
 
