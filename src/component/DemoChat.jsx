@@ -1,4 +1,5 @@
 import React from 'react';
+import { Avatar } from '@/component/ui/Avatar';
 import { FiEdit2, FiMoreVertical, FiSearch } from 'react-icons/fi';
 import { HiOutlineSpeakerWave } from 'react-icons/hi2';
 import { BiCopy } from 'react-icons/bi';
@@ -8,22 +9,22 @@ import image2 from '/image-2.png'
 export function DemoChat() {
   return (
     <div className="relative w-full h-screen bg-[#1F296A] overflow-hidden scrollbar-none">
-      
-      <div className="top-8 right-8 absolute">
-        <button className="flex items-center bg-[#324094] text-white text-sm rounded-full py-2 px-4">
-          <span className="mr-2 bg-[#324094] rounded-full px-2">AI</span>
+
+      <div className="top-8 right-8 absolute flex gap-2">
+        <Avatar name="Abhinav Meshram" />
+        <div className="flex items-center bg-[#324094] text-white text-sm w-[257px] h-[58px] rounded-t-[20px] rounded-br-[20px]  px-4">
           <span className="text-xs">Create atleast 4 images similar to this</span>
-        </button>
+        </div>
       </div>
-      
-      <div className="top-16 right-32 w-70 h-60 absolute">
+
+      <div className="top-20 right-32 w-70 h-60 absolute">
         <img
           src={image2}
           alt="Genie Character"
           className="object-contain w-full h-full"
         />
       </div>
-      
+
       <div className="top-44 left-20 absolute flex items-center space-x-3">
         <div className="w-12 h-12 rounded-full p-0.5 bg-gradient-to-br from-[#C85ED8] to-[#A079F8]">
           <div className="w-full h-full rounded-full bg-[#1F296A] flex items-center justify-center">
@@ -80,13 +81,13 @@ export function DemoChat() {
       <div className="absolute top-[460px] left-24 w-[622px] h-[180px] rounded-2xl flex overflow-hidden bg-[#324094] backdrop-blur-sm shadow-md">
         <div className="relative w-[207px] h-full rounded-l-2xl overflow-hidden bg-blue-400">
           <div className="bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center w-full h-full">
-            <img 
+            <img
               src={image1}
               alt="Genie on magic carpet"
               className="object-cover w-full h-full"
             />
           </div>
-          
+
           <div className="absolute top-2 right-2 w-7 h-7 bg-[#1F296A] border border-white/30 rounded-full flex items-center justify-center">
             <FiEdit2 className="text-white" size={14} />
           </div>

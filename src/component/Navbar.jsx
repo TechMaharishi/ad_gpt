@@ -21,7 +21,7 @@ export function Navbar({toggleMenu}) {
         <EmulateButton />
         <LanguageSelector/>
         <ToggleButton />
-        <Avatar name="John Doe" />
+        <Avatar name="Abhinav Meshram" />
       </div>      
     </div>
   );

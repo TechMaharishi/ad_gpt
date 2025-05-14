@@ -23,7 +23,7 @@ export function Home() {
         <DemoChat />        
       </div>
 
-      <div className='px-5 bottom-10 absolute flex justify-center w-full pb-6  lg:w-[calc(100vw-20rem)] m-0 lg:ml-[18rem]'>
+      <div className='px-5 absolute flex justify-center w-full pb-6  lg:w-[calc(100vw-20rem)] m-0 lg:ml-[18rem]'>
         <PromptBox />        
       </div>
     </div>
