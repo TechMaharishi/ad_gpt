@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar } from '@/component/Navbar';
 import { Menu } from '@/component/Menu';
 import { PromptBox } from '@/component/PromptBox';
+import { DemoChat } from '@/component/DemoChat';
 import { IoMenu } from 'react-icons/io5';
 
 export function Home() {
@@ -18,10 +19,8 @@ export function Home() {
         <Menu isOpen={menuOpen} />
       </div>
 
-      <div className='overflow-y-auto border border-amber-400 w-full lg:w-[calc(100vw-20rem)] h-[47rem] p-5 m-0 lg:ml-[18rem]'>
-
-        {/* Put the things here  */}
-        
+      <div className='w-full lg:w-[calc(100vw-20rem)] h-[47rem] p-5 m-0 lg:ml-[18rem] scrollbar-none'>
+        <DemoChat />        
       </div>
 
       <div className='px-5 bottom-10 absolute flex justify-center w-full pb-6  lg:w-[calc(100vw-20rem)] m-0 lg:ml-[18rem]'>
