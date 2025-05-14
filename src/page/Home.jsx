@@ -18,7 +18,7 @@ export function Home() {
         <Menu isOpen={menuOpen} />
       </div>
 
-      <div className='border border-amber-400 w-full lg:w-[calc(100vw-20rem)] h-[47rem] p-5 m-0 lg:ml-[18rem]'>
+      <div className='overflow-y-auto border border-amber-400 w-full lg:w-[calc(100vw-20rem)] h-[47rem] p-5 m-0 lg:ml-[18rem]'>
 
         {/* Put the things here  */}
         
