@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoBrush, IoCamera, IoCube, IoFilm, IoGlobe, IoRefresh } from 'react-icons/io5';
 import { IoColorPalette } from 'react-icons/io5';
 
-export function Menu() {
+export function Menu({ isOpen }) {
 
   const [brandDescription, setBrandDescription] = useState('');
 
@@ -16,15 +16,22 @@ export function Menu() {
 
   return (
     <div
-      className="
-        w-[16.563rem] 
-        h-full  
-        [background:linear-gradient(209.2deg,_#3F51B5_42.5%,_#673AB7_92.49%)]
-        [box-shadow:0_0_14.9px_0_#0000001F]
-        rounded-[0.625rem]
-        text-white
-      "
-    >
+  className={`
+    w-[16.563rem]
+    h-full  
+    [background:linear-gradient(209.2deg,_#3F51B5_42.5%,_#673AB7_92.49%)]
+    [box-shadow:0_0_14.9px_0_#0000001F]
+    rounded-[0.625rem]
+    text-white
+    transform
+    transition-transform
+    duration-500
+    ease-in-out
+    ${isOpen ? 'translate-x-2' : '-translate-x-full'} 
+    lg:translate-x-4
+  `}
+>
+
       <div className="border-white/20 flex gap-3 p-4 border-b">
         <button className="text-xs leading-[100%] py-1 px-2 text-white/80">Ad Copy</button>
         <button className="font-semibold text-xs py-1 px-2 text-[12px] leading-[100%] tracking-[0%]">Ad Creative</button>
