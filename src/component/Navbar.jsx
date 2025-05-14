@@ -2,6 +2,8 @@ import React from 'react'
 import { ButonNavAds, ButtonAvatar, ButtonDropDown, ButtonLogo, ButtonNavHome, ButtonTogglerMode } from './ui/Button';
 import { TfiWorld } from "react-icons/tfi";
 import Card from './ui/Card';
+import CardImageLeft from './ui/CardImageLeft';
+import PromptInputBar from './ui/PromptInputBar';
 
 export function Navbar() {
   
@@ -36,7 +38,10 @@ export function Navbar() {
       {/* <ButtonTogglerMode/> */}
       {/* <ButtonAvatar/> */}
 
-      <Card/>
+      {/* <Card/> */}
+
+      {/* <CardImageLeft/> */}
+      {/* <PromptInputBar/> */}
     </div>
   );
 }
